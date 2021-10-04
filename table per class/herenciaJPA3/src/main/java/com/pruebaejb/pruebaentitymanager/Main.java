@@ -19,10 +19,12 @@ public class Main {
     public static void main(String[] args) {
         EntityManagerFactory emf= Persistence.createEntityManagerFactory("xxx");
         StaffJpaController staffDAO=new StaffJpaController(emf);
-        staffDAO.create(new Staff( "Paco"));
-        NonTeachingStaffJpaController nonTechingDAO=new NonTeachingStaffJpaController(emf);
-        nonTechingDAO.create(new NonTeachingStaff("xxx", "area x"));
-        TeachingStaffJpaController teachDAO=new TeachingStaffJpaController(emf);
-        teachDAO.create(new TeachingStaff("teacher 1","profe de lengua", "klhsdgf"));
+//        staffDAO.create(new Staff( "Paco"));
+//        NonTeachingStaffJpaController nonTechingDAO=new NonTeachingStaffJpaController(emf);
+//        nonTechingDAO.create(new NonTeachingStaff("xxx", "area x"));
+//        TeachingStaffJpaController teachDAO=new TeachingStaffJpaController(emf);
+//        teachDAO.create(new TeachingStaff("teacher 1","profe de lengua", "klhsdgf"));
+        System.out.println(staffDAO.findStaff(5));
+        
     }
 }

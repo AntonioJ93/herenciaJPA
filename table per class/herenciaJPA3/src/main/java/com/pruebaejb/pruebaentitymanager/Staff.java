@@ -55,4 +55,9 @@ public class Staff implements Serializable {
         this.sname = sname;
     }
 
+    @Override
+    public String toString() {
+        return "Staff{" + "sid=" + sid + ", sname=" + sname + '}';
+    }
+
 }

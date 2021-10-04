@@ -7,6 +7,7 @@ package com.pruebaejb.pruebaentitymanager.DAO;
 
 import com.pruebaejb.pruebaentitymanager.DAO.exceptions.NonexistentEntityException;
 import com.pruebaejb.pruebaentitymanager.Staff;
+import com.pruebaejb.pruebaentitymanager.TeachingStaff;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;

@@ -20,7 +20,7 @@ import javax.persistence.Table;
  * @author pryet
  */
 @Entity
-@Table
+
 @Inheritance(strategy = InheritanceType.JOINED)
 
 public class Staff implements Serializable {

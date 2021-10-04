@@ -19,8 +19,8 @@ public class TeachingStaff extends Staff  implements Serializable{
     private String qualification;
    private String subjectexpertise;
 
-   public TeachingStaff( int sid, String sname, String qualification,String subjectexpertise ) {
-      super( sid, sname );
+   public TeachingStaff(String sname, String qualification,String subjectexpertise ) {
+      super( sname );
       this.qualification = qualification;
       this.subjectexpertise = subjectexpertise;
    }

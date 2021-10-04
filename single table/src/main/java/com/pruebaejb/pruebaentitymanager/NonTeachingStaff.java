@@ -18,8 +18,8 @@ import javax.persistence.Entity;
 public class NonTeachingStaff extends Staff implements Serializable {
    private String areaexpertise;
 
-   public NonTeachingStaff( int sid, String sname, String areaexpertise ) {
-      super( sid, sname );
+   public NonTeachingStaff(String sname, String areaexpertise ) {
+      super(sname );
       this.areaexpertise = areaexpertise;
    }
 

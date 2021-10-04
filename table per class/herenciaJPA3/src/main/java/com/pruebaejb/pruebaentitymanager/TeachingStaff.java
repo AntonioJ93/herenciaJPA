@@ -45,4 +45,10 @@ public class TeachingStaff extends Staff  implements Serializable{
    public void setSubjectexpertise( String subjectexpertise ){
       this.subjectexpertise = subjectexpertise;
    }
+
+    @Override
+    public String toString() {
+        return "TeachingStaff{" + "qualification=" + qualification + ", subjectexpertise=" + subjectexpertise + '}';
+    }
+   
 }

@@ -20,25 +20,25 @@ import javax.persistence.Table;
  * @author pryet
  */
 @Entity
-@Table
+
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "type")
 public class Staff implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int sid;
     private String sname;
 
-    public Staff(int sid, String sname) {
-        super();
+    public Staff(String sname) {
+       
         this.sid = sid;
         this.sname = sname;
     }
 
     public Staff() {
-        super();
+       
     }
 
     public int getSid() {

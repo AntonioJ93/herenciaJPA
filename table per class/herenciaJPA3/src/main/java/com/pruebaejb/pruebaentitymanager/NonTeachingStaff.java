@@ -35,5 +35,10 @@ public class NonTeachingStaff extends Staff implements Serializable {
    public void setAreaexpertise( String areaexpertise ){
       this.areaexpertise = areaexpertise;
    }
+
+    @Override
+    public String toString() {
+        return "NonTeachingStaff{" + "areaexpertise=" + areaexpertise + '}';
+    }
     
 }
