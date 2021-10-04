@@ -1,0 +1,13 @@
+com\pruebaejb\pruebaentitymanager\TeachingStaff.class
+com\pruebaejb\pruebaentitymanager\TeachingStaff_.class
+com\pruebaejb\pruebaentitymanager\NonTeachingStaff_.class
+com\pruebaejb\pruebaentitymanager\Staff_.class
+com\pruebaejb\pruebaentitymanager\Main.class
+com\pruebaejb\pruebaentitymanager\Staff.class
+com\pruebaejb\pruebaentitymanager\DAO\exceptions\IllegalOrphanException.class
+com\pruebaejb\pruebaentitymanager\DAO\exceptions\PreexistingEntityException.class
+com\pruebaejb\pruebaentitymanager\DAO\NonTeachingStaffJpaController.class
+com\pruebaejb\pruebaentitymanager\DAO\exceptions\NonexistentEntityException.class
+com\pruebaejb\pruebaentitymanager\DAO\TeachingStaffJpaController.class
+com\pruebaejb\pruebaentitymanager\DAO\StaffJpaController.class
+com\pruebaejb\pruebaentitymanager\NonTeachingStaff.class
