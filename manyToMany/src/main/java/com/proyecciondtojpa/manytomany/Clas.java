@@ -20,7 +20,7 @@ import javax.persistence.ManyToMany;
 @Entity
 public class Clas implements Serializable {
    @Id
-   @GeneratedValue( strategy = GenerationType.AUTO )
+   @GeneratedValue( strategy = GenerationType.IDENTITY )
    
    private int cid;
    private String cname;

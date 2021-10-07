@@ -25,20 +25,20 @@ public class Teacher implements Serializable {
    private int tid;
    private String tname;
    private String subject;
-
-   @ManyToMany(targetEntity = Clas.class)
-   private Set clasSet;
+//  bidireccional
+//   @ManyToMany(targetEntity = Clas.class)
+//   private Set clasSet;
 
    public Teacher(){
       super();
    }
    
-   public Teacher(int tid, String tname, String subject, Set clasSet) {
+   public Teacher(int tid, String tname, String subject/*, Set clasSet*/) {
       super();
       this.tid = tid;
       this.tname = tname;
       this.subject = subject;
-      this.clasSet = clasSet;
+     // this.clasSet = clasSet;
    }
    
    public int getTid() {
@@ -65,11 +65,11 @@ public class Teacher implements Serializable {
       this.subject = subject;
    }
    
-   public Set getClasSet() {
-      return clasSet;
-   }
-   
-   public void setClasSet(Set clasSet) {
-      this.clasSet = clasSet;
-   }
+//   public Set getClasSet() {
+//      return clasSet;
+//   }
+//   
+//   public void setClasSet(Set clasSet) {
+//      this.clasSet = clasSet;
+//   }
 }
