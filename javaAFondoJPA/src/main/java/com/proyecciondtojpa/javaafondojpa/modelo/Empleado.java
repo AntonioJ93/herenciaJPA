@@ -53,11 +53,11 @@ public class Empleado implements Serializable {
     @Column(name = "sueldo")
     private Long sueldo;
   @ManyToMany
-    @JoinTable(name = "tarea_pivote",
-            joinColumns = {
-                @JoinColumn(name = "id_empleado_tarea")},
-            inverseJoinColumns={
-                @JoinColumn(name="id_proyecto_tarea")} )
+//    @JoinTable(name = "tarea_pivote",
+//            joinColumns = {
+//                @JoinColumn(name = "id_empleado_tarea")},
+//            inverseJoinColumns={
+//                @JoinColumn(name="id_proyecto_tarea")} )
     private List<Proyecto> proyectos;
 
     public Empleado() {

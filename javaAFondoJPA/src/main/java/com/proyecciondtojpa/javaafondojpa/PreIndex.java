@@ -11,6 +11,8 @@ import com.proyecciondtojpa.javaafondojpa.modelo.Empleado;
 import com.proyecciondtojpa.javaafondojpa.modelo.Proyecto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -51,8 +53,19 @@ public class PreIndex extends HttpServlet {
         e.addProyecto(p);
         e2.addProyecto(p);
         e.addProyecto(p2);
-        request.setAttribute("empleado", e);
-        request.setAttribute("proyecto", p);
+        try {
+            empDAO.edit(e2);
+            empDAO.edit(e);
+            p.addEmpleado(e2);
+            p.addEmpleado(e);
+            proyectoDAO.edit(p2);
+            proyectoDAO.edit(p);
+        } catch (Exception ex) {
+            Logger.getLogger(PreIndex.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        request.setAttribute("empleado", empDAO.findEmpleado(1));
+        request.setAttribute("proyecto", proyectoDAO.findProyecto(1));
         request.getRequestDispatcher("./index.jsp").forward(request, response);
         
         

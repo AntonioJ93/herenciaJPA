@@ -32,9 +32,9 @@ public class EmpleadoJpaController implements Serializable {
 
   
             
-            em.getTransaction().begin();
+          
             em.persist(empleado);
-            em.getTransaction().commit();
+          
         
     }
 

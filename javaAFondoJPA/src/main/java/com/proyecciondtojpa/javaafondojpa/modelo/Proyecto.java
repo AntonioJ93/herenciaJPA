@@ -6,6 +6,7 @@
 package com.proyecciondtojpa.javaafondojpa.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -47,12 +48,12 @@ public class Proyecto implements Serializable {
     private String nombre;
     @Column(name = "max_horas")
     private Integer maxHoras;
-    @ManyToMany
-    @JoinTable(name = "tarea_pivote",
-            joinColumns = {
-                @JoinColumn(name = "id_proyecto_tarea")},
-            inverseJoinColumns={
-                @JoinColumn(name="id_empleado_tarea")} )
+    @ManyToMany(mappedBy = "proyectos")
+//    @JoinTable(name = "tarea_pivote",
+//            joinColumns = {
+//                @JoinColumn(name = "id_proyecto_tarea")},
+//            inverseJoinColumns={
+//                @JoinColumn(name="id_empleado_tarea")} )
     private List<Empleado> empleados;
 
 
@@ -62,7 +63,12 @@ public class Proyecto implements Serializable {
     public Proyecto(String nombre) {
         this.nombre = nombre;
     }
-
+    public void addEmpleado(Empleado empleado){
+        if(empleados==null){
+            empleados= new ArrayList<>();
+        }
+        empleados.add(empleado);
+    }
 
     public Integer getIdProyecto() {
         return idProyecto;
